@@ -8,7 +8,7 @@
 
 #### Responsive özellikte hazırlandı.
 
-## link: https://64446463092a251b0b28c792--eggbank.netlify.app/
+#### link: https://64446463092a251b0b28c792--eggbank.netlify.app/
 
 ![print-secreen](screen.png)
 
