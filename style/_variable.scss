@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,700;1,300;1,400&family=Chivo+Mono:wght@200;300;400;500;600;700;800&family=Crimson+Text:ital,wght@0,400;0,600;1,600&family=DynaPuff:wght@400;500;600;700&family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave+Display&display=swap');
+
+$title-font:'DynaPuff', cursive;
+$theme-color:#aba9a5;
+$themetext:white;
+$theme2color:#fcd95a;
+$cardback:rgb(218, 204, 204);
+$theme-buy:green;
+$theme-sell:red;
+
+@mixin backcolor{
+    background:#ffd740;
+    background-image: linear-gradient(90deg, #aba9a5 50%, #fcd95a 50%);
+}
+@mixin backcolor2{
+    background:#ffd740;
+    background-image: linear-gradient(30deg, #ffd740 50%, #ffc700 50%);
+}
+@mixin backcolor3{
+    background:#ffd740;
+    background-image: linear-gradient(30deg, #ffc700 50%, #ffd740 50%);
+}
+
+@mixin price {
+    padding: 0 10px;
+    background-color: $theme2color;
+    padding: 3px 9px;
+    border-radius: 30px;
+    font-family: 'Crimson Text', serif;
+    font-weight: bold;
+}
+
+@mixin price2 {
+    padding: 0 10px;
+    background-color: $theme-color;
+    padding: 3px 9px;
+    border-radius: 30px;
+    font-family: 'Crimson Text', serif;
+    font-weight: bold;
+}
+
+%button-left {
+    background-color: $theme-color;
+    outline: none;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+        &:hover{
+            transform: scale(1.1);
+        }
+}
+
+%button-right {
+    background-color: $theme2color;
+    outline: none;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+}
+
+@mixin back {
+    position: relative;
+    .background {
+        width: 50%;
+        background-color: #aba9a5;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        z-index: -3;
+    }
+}
+
+@mixin icon {
+    background-color: white;
+    font-size: 25px;
+    color: black;
+    padding: 5px;
+    border-radius: 15px 15px 0 15px;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.1);
+        transition: all .4s ease;
+        background-color: $theme2color;
+        color: white;
+        @include hover;
+    }
+}
+
+@mixin hover {
+    transform: scale();
+    cursor: pointer;
+    &:hover {
+        transform: scaleX(1.1);
+        transition: 0.3s ease;
+    }
+
+}
+
+%trade-buy {
+    background-color: $theme-buy;
+    outline: none;
+    border: none;
+    width: 90px;
+    padding: 5px 5px;
+    text-align: center;
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+        
+        &:hover{
+        transform: scale(1.1);
+        }
+}
+
+%trade-sell {
+    background-color: $theme-sell;
+    outline: none;
+    border: none;
+    width: 90px;
+    padding: 5px 5px;
+    text-align: center;
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+        
+        &:hover{
+        transform: scale(1.1);
+        }
+}
+
+%logo{
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    
+    p{
+        span:nth-child(1){
+        color: $theme-color;
+        font-family: $title-font;
+        }
+        span:nth-child(2){
+        color: $theme2color;
+        font-family: $title-font;
+        }
+    }
+}
